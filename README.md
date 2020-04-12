@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # idojaras-vue
 
 ## Project setup
@@ -27,3 +28,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 # Idojaras_project
 Egy csodálatos munka CSÜTÖRTÖKRE 18:00-ig
 >>>>>>> 6df2844c14c9f9ee84d7fe30c446ad3798370dc4
+=======
+# Idojaras
+Project munka
+>>>>>>> 5167e7d346bba43f0f891245477968df9f52da77
