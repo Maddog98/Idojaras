@@ -72,17 +72,19 @@ export default {
 
 body {
   font-family: "montserrat", sans-serif;
+    background-image: linear-gradient(
+    purple,blue
+  );
+  display:flex;
+ justify-content: center
 }
 
 main {
   min-height: 100vh;
   padding: 25px;
+  width:30vw;
 
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.25),
-    rgba(0, 0, 0, 0.75)
-  );
+
 }
 
 #app {
@@ -107,17 +109,16 @@ main {
   appearance: none;
   outline: none;
   background: none;
-
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-  background-color: burlywood;
-  border-radius: 0px 16px 0px 16px;
+  border-style:none;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 20px;
   transition: 0.4s;
 }
 
 .search-box .search-bar:focus {
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 16px 0px 16px 0px;
+  border-radius: 20px;
 }
 
 .location-box .location {
@@ -154,6 +155,5 @@ main {
   font-size: 48px;
   font-weight: 700;
   font-style: italic;
-  text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
 }
 </style>
