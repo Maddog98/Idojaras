@@ -83,14 +83,28 @@ p {
 }
 body {
   font-family: "montserrat", sans-serif;
+<<<<<<< HEAD
   background-image: linear-gradient(purple, blue);
   display: flex;
   justify-content: center;
+=======
+    background-image: linear-gradient(
+    purple,blue
+  );
+  display:flex;
+ justify-content: center
+>>>>>>> 2c07b26c1da37606c60d8b03a3bd6de1db2850be
 }
 main {
   min-height: 100vh;
   padding: 25px;
+<<<<<<< HEAD
   width: 30vw;
+=======
+  width:30vw;
+
+
+>>>>>>> 2c07b26c1da37606c60d8b03a3bd6de1db2850be
 }
 #app {
   background-size: cover;
@@ -110,8 +124,13 @@ main {
   appearance: none;
   outline: none;
   background: none;
+<<<<<<< HEAD
   border-style: none;
   background-color: rgba(255, 255, 255, 0.4);
+=======
+  border-style:none;
+  background-color: rgba(255,255,255,0.4);
+>>>>>>> 2c07b26c1da37606c60d8b03a3bd6de1db2850be
   border-radius: 20px;
   transition: 0.4s;
 }
