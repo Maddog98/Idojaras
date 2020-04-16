@@ -20,7 +20,7 @@
         />
       </div>
 
-      <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
+      <div class="weather-wrap" v-if="typeof weather.main != 'undefined' ">
         <div class="location-box">
           <div class="location">{{ weather.name }}, {{ weather.sys.country }}</div>
         </div>
@@ -31,6 +31,9 @@
           <div class="hi_low"></div>
           <div class="image"></div>
         </div>
+      </div>
+      <div class="error" v-if="weather=='nincs ilyen város'">
+        <p>Ilyen város nem létezik</p>
       </div>
     </main>
   </div>
@@ -56,7 +59,13 @@ export default {
           `${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`
         )
           .then(res => {
-            return res.json();
+            console.log(res);
+            if (res.status != "404") {
+              return res.json();
+            } else {
+              console.log("hiba");
+              return "nincs ilyen város";
+            }
           })
           .then(this.setResults);
       }
@@ -83,28 +92,14 @@ p {
 }
 body {
   font-family: "montserrat", sans-serif;
-<<<<<<< HEAD
   background-image: linear-gradient(purple, blue);
   display: flex;
   justify-content: center;
-=======
-    background-image: linear-gradient(
-    purple,blue
-  );
-  display:flex;
- justify-content: center
->>>>>>> 2c07b26c1da37606c60d8b03a3bd6de1db2850be
 }
 main {
   min-height: 100vh;
   padding: 25px;
-<<<<<<< HEAD
   width: 30vw;
-=======
-  width:30vw;
-
-
->>>>>>> 2c07b26c1da37606c60d8b03a3bd6de1db2850be
 }
 #app {
   background-size: cover;
@@ -124,13 +119,8 @@ main {
   appearance: none;
   outline: none;
   background: none;
-<<<<<<< HEAD
   border-style: none;
   background-color: rgba(255, 255, 255, 0.4);
-=======
-  border-style:none;
-  background-color: rgba(255,255,255,0.4);
->>>>>>> 2c07b26c1da37606c60d8b03a3bd6de1db2850be
   border-radius: 20px;
   transition: 0.4s;
 }
